@@ -23,7 +23,7 @@ The application will make a request to external source for breeds if it could no
 Updates breed module by supplied id and form data
 ```
 PUT /api/breeds/{breed}
-`
+```
 
 ## Tests
 
