@@ -1,0 +1,50 @@
+{
+    "name": "fcp/animal-breeds-search",
+    "description": "Animal Breed Search Commandline package.",
+    "license": "license",
+    "authors": [
+        {
+            "name": "Megan Davidson",
+            "email": "megan.davidson@4cplatform.co.uk",
+            "homepage": "https://www.4cplatform.co.uk"
+        }
+    ],
+    "keywords": ["Laravel", "AnimalBreedsSearch"],
+    "require": {
+        "illuminate/support": "~8",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~8.0|~9.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3|~4|~5|~6",
+        "sempro/phpunit-pretty-print": "^1.0",
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "roave/security-advisories": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fcp\\AnimalBreedsSearch\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Fcp\\AnimalBreedsSearch\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Fcp\\AnimalBreedsSearch\\AnimalBreedsSearchServiceProvider"
+            ],
+            "aliases": {
+                "AnimalBreedsSearch": "Fcp\\AnimalBreedsSearch\\Facades\\AnimalBreedsSearch"
+            }
+        }
+    },
+    "scripts": {
+        "tests": "././vendor/bin/phpunit",
+        "fix": "./vendor/bin/php-cs-fixer fix --using-cache=no",
+        "coverage": "php -d pcov.enabled=1 ./vendor/bin/phpunit --coverage-html ./tests/code-coverage-report"
+    }
+}
